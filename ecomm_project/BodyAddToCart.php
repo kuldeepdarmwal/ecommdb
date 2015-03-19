@@ -3,17 +3,15 @@
 <div id="body">
 <h1 style="color:MediumVioletRed;text-align:center"><font face="BedRock">Your Cart</h1>
 <table class="table table-striped table-bordered" border="3">
-	<thead>
-		<tr>
-			<th width="13%"><font face="BedRock" color="DarkSlateGray">Product Name</th>
-			<th width="10%"><font face="BedRock" color="DarkSlateGray">Price</th>
-			<th width="15%"><font face="BedRock" color="DarkSlateGray">Image Name</th>
-			<th width="35"><font face="BedRock" color="DarkSlateGray">Image</th>
-			<th width="27%"><font face="BedRock" color="DarkSlateGray">Description </th>
-		</tr>
-	</thead>
+
+
+
 <?php
+
+	include_once("html/displayTable.html");
+	
 	$var=$_SERVER['QUERY_STRING'];
+	include_once "DisplayTable.php";
 	$_SESSION['key']=$var;
 	$price=0;
 	$arra=[];	
@@ -27,30 +25,16 @@
 		}
 	}
 	echo '<tr>';
-	foreach ($arra[0] as $booking) {
-		$temp=$booking;
-		$temp=explode(",", $temp);
-		foreach ($temp as $key=>$booking2) {
-		if ($key == 0) {	
-		}
-		if ($key == 1 or $key==2 or $key==3) {
-			echo "<td>".$booking2."</td>";
-		}
-		 if ($key == 4) {
-			echo "<td>";
-			echo '<img src="'.$booking2.'" alt="images" >';
-			echo "</td>";
-		}
-		if ($key==5) {
-			echo "<td>".$booking2."</td>";
-			echo '<tr>';
-			echo '</tr>';
-		}
-	   if ($key==2) {
-				$price+=$booking2;
-			}
-		}
-	}
+	
+		
+		
+		
+		
+		
+		$objTable=new DisplayTable();
+        $price=$objTable->displayForeach($arra[0]);
+
+	
 echo "</tr>";
 ?>
 		<tr>
