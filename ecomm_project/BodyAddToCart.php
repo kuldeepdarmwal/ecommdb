@@ -9,14 +9,17 @@
 <?php
 
 	include_once("html/displayTable.html");
+	include_once "DisplayTable.php";
 	
 	$var=$_SERVER['QUERY_STRING'];
-	include_once "DisplayTable.php";
+		
 	$_SESSION['key']=$var;
+	echo $var;
 	$price=0;
 	$arra=[];	
 	$arra=array(explode("&",str_replace('%2F','/',(str_replace('%2C',',',urldecode(html_entity_decode($_SERVER['QUERY_STRING'])))))));
 	$array1 = $arra[0];
+	
 	foreach ($array1 as $key =>$value) {
 		if($key == 0){
 			$array1[$key]= substr($value,18,-18);

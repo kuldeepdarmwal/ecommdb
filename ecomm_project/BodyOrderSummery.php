@@ -9,15 +9,12 @@
 <?php
 
 include_once("html/displayTable.html");
-
 include_once "Helper.php";
 include_once "DisplayTable.php";
+
 $var=$_SESSION['user'];
-$obj = new Helper("ecomm");
-$field="user_id,mobile,address,city,zip";
-$table="user_details";
-$condition="user_id='".$var."'";
-$record=$obj->read_record($field, $table, $condition);
+
+
 $arra=[];
 $price=0;
 $arra=array(explode("&",str_replace('%2F','/',(str_replace('%2C',',',urldecode(html_entity_decode($_SESSION['key'])))))));
@@ -54,6 +51,15 @@ echo "</tr>";
 <td>&nbsp;&nbsp;&nbsp;<?php echo $_SESSION['email'];?>&nbsp;&nbsp;&nbsp;</td>
 </tr>
 <?php
+
+
+$obj = new Helper("ecomm");
+$field="user_id,mobile,address,city,zip";
+$table="user_details";
+$condition="user_id='".$var."'";
+$record=$obj->read_record($field, $table, $condition);
+
+
 foreach ($record as $key ) {
     $_SESSION["user_details_id"]= $key['user_id'];
     foreach ($key as $subElement=>$val) {
