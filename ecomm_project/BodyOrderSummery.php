@@ -16,11 +16,8 @@ $var=$_SESSION['user'];
 
 include_once "includedfileDuplication.php";
 
-
-
 $objTable2=new DisplayTable();
 $price=$objTable2->displayForeach($arra[0]);
-
 
 	
 
