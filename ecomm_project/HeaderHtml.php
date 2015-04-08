@@ -3,6 +3,10 @@
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ecommerce</title>
+  
+  
+<link href="http://localhost:8087/CI_ProjectsDone/CI_cart/images/logos/1/favicon.ico" rel="shortcut icon" />
+  
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/plug-ins/f2c75b7247b/
 integration/bootstrap/3/dataTables.bootstrap.css">
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
