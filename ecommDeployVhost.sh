@@ -28,9 +28,9 @@ sudo echo '<VirtualHost *:80>
 </VirtualHost>' >>/opt/rh/httpd24/root/etc/httpd/conf.d/ecommercecd.conf
 
 
-service httpd24-httpd restart
+sudo service httpd24-httpd restart
 
-firefox -new-window ecommercecd
+#sudo firefox -new-window ecommercecd
 #echo "Hurrah! Got success"
 #cd /opt/rh/httpd24/root/etc/httpd/conf.d/
 #rm -rf ecommerce-cd.conf
