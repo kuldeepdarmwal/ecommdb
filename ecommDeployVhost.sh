@@ -5,7 +5,7 @@ sudo unzip -do /opt/rh/httpd24/root/var/www/html/ecommercecd /var/lib/jenkins/jo
 
 cd /opt/rh/httpd24/root/var/www/html/
 
-chmod -R 777 ecommercecd
+sudo chmod -R 777 ecommercecd
 
 echo  "127.0.0.1 ecommercecd">>sudo /etc/hosts
 echo "Creating VHOST file "
