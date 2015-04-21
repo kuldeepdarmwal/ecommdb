@@ -13,7 +13,7 @@ sudo unzip -do ecommercecd ecomm_project.zip
 
 sudo chmod -R 777 ecommercecd
 
-echo  "127.0.0.1 ecommercecd">>sudo /etc/hosts
+sudo echo  "127.0.0.1 ecommercecd">>sudo /etc/hosts
 echo "Creating VHOST file "
 sudo echo '<VirtualHost *:80>
     <Directory "/opt/rh/httpd24/root/var/www/html/ecommercecd">
