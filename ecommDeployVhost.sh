@@ -1,15 +1,15 @@
 #!/bin/bash
 ####################### Unzip File into specified directory#########################
 
-unzip -d /opt/rh/httpd24/root/var/www/html/ecommercecd /var/lib/jenkins/jobs/GK_Php_Dupl/workspace/ecomm_project.zip
+sudo unzip -do /opt/rh/httpd24/root/var/www/html/ecommercecd /var/lib/jenkins/jobs/GK_Php_Dupl/workspace/ecomm_project.zip
 
 cd /opt/rh/httpd24/root/var/www/html/
 
 chmod -R 777 ecommercecd
 
-echo  "127.0.0.1 ecommercecd">>/etc/hosts
+echo  "127.0.0.1 ecommercecd">>sudo /etc/hosts
 echo "Creating VHOST file "
-echo '<VirtualHost *:80>
+sudo echo '<VirtualHost *:80>
     <Directory "/opt/rh/httpd24/root/var/www/html/ecommercecd">
         Options Indexes FollowSymLinks Includes ExecCGI
         Order allow,deny
