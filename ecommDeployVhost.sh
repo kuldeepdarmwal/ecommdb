@@ -1,9 +1,15 @@
 #!/bin/bash
 ####################### Unzip File into specified directory#########################
 
-sudo unzip -do /opt/rh/httpd24/root/var/www/html/ecommercecd /var/lib/jenkins/jobs/GK_Php_Dupl/workspace/ecomm_project.zip
 
 cd /opt/rh/httpd24/root/var/www/html/
+
+
+sudo cp -r /var/lib/jenkins/jobs/GK_Php_Dupl/workspace/ecomm_project.zip  /opt/rh/httpd24/root/var/www/html 
+
+sudo unzip -do ecommercecd ecomm_project.zip
+
+
 
 sudo chmod -R 777 ecommercecd
 
